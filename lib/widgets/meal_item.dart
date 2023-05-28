@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 import '../models/meal.dart';
 import 'meal_item_trait.dart';
-// import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
   const MealItem({
@@ -38,15 +38,13 @@ class MealItem extends StatelessWidget {
         },
         child: Stack(
           children: [
-            //TODO fix library dependecy
-            // FadeInImage(
-            //   placeholder: MemoryImage(kTransparentImage),
-            //   image: NetworkImage(meal.imageUrl),
-            //   fit: BoxFit.cover,
-            //   height: 200,
-            //   width: double.infinity,
-            // ),
-            Image.network(meal.imageUrl),
+            FadeInImage(
+              placeholder: MemoryImage(kTransparentImage),
+              image: NetworkImage(meal.imageUrl),
+              fit: BoxFit.cover,
+              height: 200,
+              width: double.infinity,
+            ),
             Positioned(
               bottom: 0,
               left: 0,
