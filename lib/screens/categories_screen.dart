@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/dummy_data.dart';
 import '../models/category.dart';
 import '../widgets/category_grid_item.dart';
-import 'meals_screen.dart';
+import 'category_details_screen.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
@@ -15,7 +15,7 @@ class CategoriesScreen extends StatelessWidget {
 
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) => MealsScreen(
+        builder: (ctx) => CategoryDetailsScreen(
           title: category.title,
           meals: filteredMeals,
         ),
